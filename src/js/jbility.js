@@ -65,6 +65,29 @@ jQuery(document).ready(function( $ ){
     $('#jbbutton').removeClass('f-transparent');
   }
 
+  function addDyslexic(){
+	$("body").addClass("dyslexic");
+  }
+
+  function removeDyslexic(){
+	$("body").removeClass("dyslexic");
+  }
+
+  	$('#dyslexicFont').click(function(){
+		var ck = checkCookie('ddyslexic');
+		if(ck){
+			deleteCookie('ddyslexic');
+			removeDyslexic();
+		}else{
+			createCookie('ddyslexic', 'cookieDyslexic');
+			addDyslexic();
+		}
+	});
+
+	if(checkCookie('ddyslexic')){
+		addDyslexic();
+	}
+
   if(checkCookie('ccontrast')){
   	addConstrast();
   }
@@ -105,7 +128,9 @@ jQuery(document).ready(function( $ ){
 	});
 
 	$('#jbbutton').click(function(){
-    $('#acess-icons').toggle(150);
-  });
+    	$('#acess-icons').toggle(150);
+	});
+	  
+	
 
 });

@@ -95,3 +95,9 @@
 .balloon:hover .balloontext {
     visibility: visible;
 }
+
+.dyslexic, .dyslexic :not(.glyphicon) {
+    font-family: OpenDyslexicRegular!important;
+}
+
+

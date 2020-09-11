@@ -6,7 +6,7 @@ jBility is a free set of accessibility functions that uses JQuery.
 The goal is to allow people with low vision to see your website's content.
 
 ## What does jBility?
-Currently jBility has three functions:
+Currently jBility has four functions:
 
 ### Contrast 
 Changes the css of your page, highlighting texts and links. This function uses cookies to work. By default, the cookie die when browser is closed.  
@@ -23,6 +23,9 @@ Increases all fonts of your page.
 ### Decrease Font
 Decreases all fonts of your page.
 
+### Dyslexic Font
+Replaces all fonts on your page with OpenDyslexic.
+
 These functions make it easier to view a page's content.
 
 ## Example
@@ -37,8 +40,17 @@ git clone https://github.com/urielcaire/jbility.git
 ```
 Or using the download button.
 
-Reference the css file properly in your HTML `<head>` tag.
+Reference the css file properly in your HTML `<head>` tag and add a font-face for OpenDyslexic font
 ```html
+<style>
+	@font-face{
+		font-family:OpenDyslexicRegular;
+		src:url({{url('/jbility/src/fonts/OpenDyslexic-Regular.otf')}});
+		font-display:fallback;
+		font-style:normal;
+		font-weight:normal;
+	}
+</style>
 <link rel="stylesheet" type="text/css" href="path/to/jbility/css/jbility.min.css">
 ```
 
@@ -50,6 +62,7 @@ Insert the code below on your footer or before close body:
 		<div class="acess-icon balloon"><span class="balloontext">Contrast</span><img id="contrast" src="img/contraste40.png"/></div>
 		<div class="acess-icon balloon"><span class="balloontext">Increase Font</span><img id="increaseFont" src="img/fontsma40.png"/></div>
 		<div class="acess-icon balloon"><span class="balloontext">Decrease Font</span><img id="decreaseFont" src="img/fontsme40.png"/></div>
+		<div class="acess-icon balloon"><span class="balloontext">Dyslexic Font</span><img id="dyslexicFont" src="img/fontsmd40.png"/></div>
 	</div>
 </div>
 ```
