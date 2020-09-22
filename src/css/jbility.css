@@ -100,4 +100,16 @@
     font-family: OpenDyslexicRegular!important;
 }
 
+.pagina-acessivel .list-group-item {
+    background-color: inherit; 
+}
+
+.pagina-acessivel .dropdown-menu {
+    background-color: inherit; 
+}
+
+.pagina-acessivel .form-control {
+    background-color: inherit; 
+}
+
 
